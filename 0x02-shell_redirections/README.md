@@ -7,3 +7,5 @@ This directory contains scripts on Shell, I/O Redirections and filters
 2-hellofile: This script displays the content of the /etc/passwd file
 
 3-twofiles: This script displays the content of /etc/passwd and /etc/hosts
+
+4-lastlines: This script displays the last 10 lines of /etc/passwd
