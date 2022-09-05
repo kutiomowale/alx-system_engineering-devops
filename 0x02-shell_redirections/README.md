@@ -11,3 +11,5 @@ This directory contains scripts on Shell, I/O Redirections and filters
 4-lastlines: This script displays the last 10 lines of /etc/passwd
 
 5-firstlines: This script displays the first 10 lines of /etc/passwd
+
+6-third_line:This script displays the third line of the file iacta.The file iacta will be in the working directory
