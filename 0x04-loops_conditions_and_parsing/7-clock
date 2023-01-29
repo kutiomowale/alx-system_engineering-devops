@@ -5,7 +5,7 @@
 # display minutes from 1 to 59
 
 i="0"
-while [ "$i" -le 11 ]
+while [ "$i" -le 12 ]
 do
 echo "Hour: $i"
 j="1"
@@ -16,4 +16,3 @@ j=$((j + 1))
 done
 i=$((i + 1))
 done
-echo "Hour: 12"
