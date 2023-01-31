@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
 # A Bash script that displays the PID, along with the process name,
 # of processes whose name contain the word bash. Without using the ps command
-for i in $(pidof -x bash); do echo "$i bash"; done
+# Looop through the list of all processes
+# Loop through the list of all processes
+while IFS= read -r pid; do
+  # Check if the process name contains the word "bash"
+  if grep -q "bash" "/proc/$pid/status" 2>/dev/null; then
+      # Get the process name
+      process_name=$(grep "Name:" "/proc/$pid/status" | awk '{print $2}')
+      # Display the PID and process name
+      printf "%s %s\n" "$pid" "$process_name"
+  fi
+done < <(find /proc -maxdepth 1 -regex "/proc/[0-9]+" -print0)
