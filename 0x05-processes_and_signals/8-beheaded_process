@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A Bash script that kills the process 7-highlander.
+# 7-highlander has a SIGTERM signal trap
+pkill -9 -f 7-highlander
